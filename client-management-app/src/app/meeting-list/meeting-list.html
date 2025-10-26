@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <h2>Meeting Management</h2>
+
+  <!-- Meeting Form -->
+  <form (ngSubmit)="addMeeting()" class="row g-3 mt-3">
+    <div class="col-md-3">
+      <select [(ngModel)]="newMeeting.client_id" name="client_id" class="form-select" required>
+        <option value="" disabled selected>Select Client</option>
+        <option *ngFor="let c of clients" [value]="c.client_id">{{ c.client_name }}</option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+      <input [(ngModel)]="newMeeting.meeting_date" name="meeting_date" type="date" class="form-control" required>
+    </div>
+
+    <div class="col-md-4">
+      <input [(ngModel)]="newMeeting.topic" name="topic" class="form-control" placeholder="Meeting Topic" required>
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-primary w-100">Add Meeting</button>
+    </div>
+  </form>
+
+  <!-- Meetings Table -->
+  <table class="table table-hover mt-4">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Client</th>
+        <th>Date</th>
+        <th>Topic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of meetings">
+        <td>{{ m.meeting_id }}</td>
+        <td>{{ m.client_name }}</td>
+        <td>{{ m.meeting_date | date }}</td>
+        <td>{{ m.topic }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

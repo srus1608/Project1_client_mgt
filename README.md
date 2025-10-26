@@ -2,8 +2,6 @@
 
 A simple **Client Management System** built using **Angular** (frontend) and **Node.js + Express + MySQL** (backend).
 
----
-
 ## 🚀 Features
 
 - Add new clients with project details
@@ -13,32 +11,6 @@ A simple **Client Management System** built using **Angular** (frontend) and **N
 - Simple UI using Bootstrap
 - Fully functional Angular + Node + MySQL integration
 
----
-
-## 🏗️ Project Structure
-
-Client-project/
-├── client-management-app/
-│ ├── src/
-│ │ ├── app/
-│ │ │ ├── client-list/
-│ │ │ │ ├── client-list.ts
-│ │ │ │ ├── client-list.html
-│ │ │ │ └── client-list.css
-│ │ │ └── app.module.ts
-│ │ ├── index.html
-│ │ └── main.ts
-│ └── angular.json
-│
-├── backend/
-│ ├── server.js
-│ └── routes/
-│ └── clients.js
-│
-└── package.json
-
-
----
 
 ## ⚙️ Installation & Setup
 
